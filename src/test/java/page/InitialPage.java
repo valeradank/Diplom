@@ -12,4 +12,8 @@ public class InitialPage {
         return new PageInformation();
 
     }
+    public PageInformation buyCredit(){
+        credit.click();
+        return new PageInformation();
+    }
 }

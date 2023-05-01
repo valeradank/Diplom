@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiplomTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-04-26T13:12:30" hostname="DESKTOP-P1OSEEA" time="27.416">
+  <properties/>
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="4.231"/>
+  <testcase name="buyWithActuallyCardInCredit()" classname="DiplomTest" time="4.907"/>
+  <testcase name="buyWithFalseCard()" classname="DiplomTest" time="2.042"/>
+  <testcase name="buyWithRandomCardInCredit()" classname="DiplomTest" time="2.862"/>
+  <testcase name="buyWithFalseCardInCredit()" classname="DiplomTest" time="6.423"/>
+  <testcase name="buyWithRandomCard()" classname="DiplomTest" time="6.946"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 4529
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+апр. 26, 2023 4:12:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 110
+]]></system-err>
+</testsuite>

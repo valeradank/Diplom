@@ -3,22 +3,28 @@ package page;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
+import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$x;
+import static java.awt.SystemColor.info;
 
 public class PageInformation {
-    private SelenideElement cardNumber =$x("//span[text()='Номер карты']");
-    private SelenideElement month = $x("//span[text()='Номер карты']");
-    private SelenideElement year = $x("//span[text()='Год']");
-    private SelenideElement owner = $x("//span[text()='Владелец']");
-    private SelenideElement cvv = $x("//span[text()='CVC/CVV']");
+    private SelenideElement cardNumber =$x("//*[@placeholder='0000 0000 0000 0000']");
+    private SelenideElement month = $x("//*[@placeholder='08']");
+    private SelenideElement year = $x("//*[@placeholder='22']");
+    private SelenideElement owner = $x("(//*[@class='input__control'])[4]");
+    private SelenideElement cvv = $x("(//*[@class='input__control'])[5]");
     private SelenideElement button = $x("//span[text()='Продолжить']");
     private SelenideElement notification = $x("(//*[@class='notification__icon'])[1]");
     private SelenideElement errorNotification = $x("(//*[@class='notification__icon'])[2]");
-
-public PageInformation cardDetails(DataHelper.RandomInfo info) {
+    private SelenideElement buyButton = $x("//span[text()='Купить']");
+    private SelenideElement wrongInfo =$x("//span[text()='Истёк срок действия карты']");
+    public PageInformation() {
+        buyButton.shouldBe(Condition.visible);
+    }
+public PageInformation cardRandomDetails(DataHelper.RandomInfo info) {
 cardNumber.setValue(info.getRandomCardNumber());
 month.setValue(info.getRandomMonth());
 year.setValue(info.getRandomYear());
@@ -27,7 +33,24 @@ cvv.setValue(info.getRandomCvc());
 button.click();
 return new PageInformation();
 }
+    public PageInformation CardDetails(DataHelper.AuthInfo info) {
+        cardNumber.setValue(info.getCardNumber());
+        month.setValue(info.getMonth());
+        year.setValue(info.getYear());
+        owner.setValue(info.getOwner());
+        cvv.setValue(info.getCvv());
+        button.click();
+        return new PageInformation();
+    }
+
+    public void ErrorNotificationVisible() {
+        errorNotification.shouldBe(Condition.visible, Duration.ofSeconds(10));
+    }
+
     public void notificationVisible() {
         notification.shouldBe(Condition.visible, Duration.ofSeconds(10));
+    }
+    public void wrongInfoVisible() {
+        wrongInfo.shouldBe(Condition.visible,Duration.ofSeconds(10));
     }
 }
