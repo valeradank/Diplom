@@ -2,8 +2,10 @@ import data.DataHelper;
 import org.junit.jupiter.api.Test;
 import page.InitialPage;
 import page.PageInformation;
-
+import data.DataBase;
 import static com.codeborne.selenide.Selenide.open;
+import static data.DataBase.getPostgreConn;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class DiplomTest {
@@ -16,6 +18,10 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
+        String expectedStatus = "SUCCESS";
+        String actualStatus = DataBase.returnStatusOfTransaction(DataBase.getPostgreConn());
+        assertEquals(expectedStatus, actualStatus);
+
 
     }
 
