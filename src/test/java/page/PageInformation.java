@@ -3,12 +3,10 @@ package page;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
-import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static java.awt.SystemColor.info;
 
 public class PageInformation {
     private SelenideElement cardNumber =$x("//*[@placeholder='0000 0000 0000 0000']");
@@ -47,8 +45,9 @@ return new PageInformation();
         errorNotification.shouldBe(Condition.visible, Duration.ofSeconds(10));
     }
 
-    public void notificationVisible() {
+    public String notificationVisible() {
         notification.shouldBe(Condition.visible, Duration.ofSeconds(10));
+        return null;
     }
     public void wrongInfoVisible() {
         wrongInfo.shouldBe(Condition.visible,Duration.ofSeconds(10));

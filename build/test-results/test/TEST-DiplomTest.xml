@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-05-29T09:47:20" hostname="DESKTOP-P1OSEEA" time="5.45">
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-05-29T12:45:06" hostname="DESKTOP-P1OSEEA" time="5.53">
   <properties/>
-  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="5.45">
-    <failure message="org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.&#10;Build info: version: '4.8.1', revision: '8ebccac989'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [19d822d3160a12422693165e53959ce8, get {url=http://localhost:8080}]&#10;selenide.url: http://localhost:8080&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\valo\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63583}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63583/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;selenide.baseUrl: http://localhost:8080&#10;Session ID: 19d822d3160a12422693165e53959ce8" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.17'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19d822d3160a12422693165e53959ce8, get {url=http://localhost:8080}]
-selenide.url: http://localhost:8080
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\valo\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63583}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63583/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-selenide.baseUrl: http://localhost:8080
-Session ID: 19d822d3160a12422693165e53959ce8
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at app//org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:983)
-	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:74)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:105)
-	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70)
-	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
-	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101)
-	at app//com.codeborne.selenide.Selenide.open(Selenide.java:52)
-	at app//DiplomTest.buyWithActuallyCard(DiplomTest.java:14)
+  <testcase name="buyWithFalseCard()" classname="DiplomTest" time="5.53">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;DECLINED&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;DECLINED&gt; but was: &lt;null&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at app//DiplomTest.buyWithFalseCard(DiplomTest.java:59)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,47 +100,14 @@ Session ID: 19d822d3160a12422693165e53959ce8
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 99 more
-Caused by: java.io.IOException: Удаленный хост принудительно разорвал существующее подключение
-	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
-	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
-	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:356)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:829)
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 1717
+  <system-err><![CDATA[Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 12004
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мая 29, 2023 12:47:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мая 29, 2023 3:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 110
-[1685353645.654][WARNING]: Processing messages while being disconnected
 ]]></system-err>
 </testsuite>

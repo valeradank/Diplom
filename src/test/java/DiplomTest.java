@@ -3,8 +3,11 @@ import org.junit.jupiter.api.Test;
 import page.InitialPage;
 import page.PageInformation;
 import data.DataBase;
+
+import java.sql.Connection;
+
 import static com.codeborne.selenide.Selenide.open;
-import static data.DataBase.getPostgreConn;
+import static data.DataBase.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -18,9 +21,12 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        String expectedStatus = "SUCCESS";
+        String expectedStatus = "APPROVED";
         String actualStatus = DataBase.returnStatusOfTransaction(DataBase.getPostgreConn());
         assertEquals(expectedStatus, actualStatus);
+
+
+
 
 
     }
@@ -35,6 +41,8 @@ public class DiplomTest {
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
 
+
+
     }
 
     @Test
@@ -46,6 +54,9 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
+        String expectedStatus = "DECLINED";
+        String actualStatus = DataBase.returnStatusOfTransaction(DataBase.getPostgreConn());
+        assertEquals(expectedStatus, actualStatus);
     }
 
     @Test

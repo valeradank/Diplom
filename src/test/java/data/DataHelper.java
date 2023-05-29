@@ -23,7 +23,7 @@ public class DataHelper {
     }
 
     public static AuthInfo getActuallyCardInfo() {
-        return new AuthInfo("4444 4444 4444 4441", "06", "24", "Anton Antonov", "222");
+        return new AuthInfo("4444 4444 4444 4441", "06", "24", "Anton Ivanov", "222");
     }
 
     public static AuthInfo getFalseCardInfo() {
