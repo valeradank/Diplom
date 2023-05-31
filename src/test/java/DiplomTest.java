@@ -21,9 +21,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        String expectedStatus = "APPROVED";
-        String actualStatus = DataBase.returnStatusOfTransaction(DataBase.getPostgreConn());
-        assertEquals(expectedStatus, actualStatus);
+        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("APPROVED");
 
 
 
@@ -54,9 +52,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
-        String expectedStatus = "DECLINED";
-        String actualStatus = DataBase.returnStatusOfTransaction(DataBase.getPostgreConn());
-        assertEquals(expectedStatus, actualStatus);
+        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("DECLINED");
     }
 
     @Test

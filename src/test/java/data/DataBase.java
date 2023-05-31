@@ -38,9 +38,18 @@ public class DataBase {
     @SneakyThrows
     public static String returnStatusOfTransaction(Connection connection) {
         var codeSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
-        var status = runner.query(connection, codeSQL, new ScalarHandler<>());
+        var conn = getPostgreConn();
+        var status = runner.query(conn, codeSQL, new ScalarHandler<>());
+        return String.valueOf(status);
+        }
+    @SneakyThrows
+    public static String returnStatusOfTransactionMysql(Connection mySQLConn) {
+        var codeSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
+        var conn = getMySQLConn();
+        var status = runner.query(conn, codeSQL, new ScalarHandler<>());
         return String.valueOf(status);
     }
+
 
     @BeforeEach
     @SneakyThrows
