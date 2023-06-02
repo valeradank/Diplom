@@ -1,13 +1,13 @@
-version: "1"
+version: "3.7"
 services:
   node:
     image: "node:8"
     user: "node"
-    working_dir: /Users/valo/Desktop/Diplom/gate-simulator
+    working_dir: /home/node/app
     environment:
       - NODE_ENV=production
     volumes:
-      - ./data:\Users\valo\Desktop\Diplom
+      - ./data:/home/node/app
     expose:
       - "9999"
     command: "npm start"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-05-31T10:01:18" hostname="DESKTOP-P1OSEEA" time="10.92">
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-02T10:37:58" hostname="DESKTOP-P1OSEEA" time="8.806">
   <properties/>
-  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="10.92">
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="8.806">
     <failure message="java.sql.SQLException: Access denied for user 'app'@'172.18.0.1' (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user 'app'@'172.18.0.1' (using password: YES)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
@@ -11,8 +11,8 @@
 	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
-	at data.DataBase.getConnection(DataBase.java:27)
-	at data.DataBase.getMySQLConn(DataBase.java:31)
+	at data.DataBase.getConnection(DataBase.java:28)
+	at data.DataBase.getMySQLConn(DataBase.java:32)
 	at DiplomTest.buyWithActuallyCard(DiplomTest.java:24)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -107,11 +107,11 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 34628
+  <system-err><![CDATA[Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 17623
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мая 31, 2023 1:01:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+июн. 02, 2023 1:38:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: 110
 ]]></system-err>
 </testsuite>
