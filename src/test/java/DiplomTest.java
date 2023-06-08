@@ -4,11 +4,11 @@ import page.InitialPage;
 import page.PageInformation;
 import data.DataBase;
 
-import java.sql.Connection;
+
 
 import static com.codeborne.selenide.Selenide.open;
 import static data.DataBase.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 public class DiplomTest {

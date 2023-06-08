@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-08T13:16:38" hostname="DESKTOP-P1OSEEA" time="9.689">
+  <properties/>
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="9.689"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 33069
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+июн. 08, 2023 4:16:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 114, so returning the closest version found: 110
+]]></system-err>
+</testsuite>
