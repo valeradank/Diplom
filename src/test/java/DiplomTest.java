@@ -7,8 +7,10 @@ import data.DataBase;
 
 
 import static com.codeborne.selenide.Selenide.open;
-import static data.DataBase.*;
 
+
+import static data.DataBase.getMySQLConn;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class DiplomTest {
@@ -21,7 +23,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("APPROVED");
+        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("DECLINED");
 
 
 
@@ -38,7 +40,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("APPROVED");
+
 
 
 
@@ -53,7 +55,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
-        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("DECLINED");
+
     }
 
     @Test
@@ -65,6 +67,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
+
     }
 
     @Test
