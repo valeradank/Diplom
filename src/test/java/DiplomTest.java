@@ -23,7 +23,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        DataBase.returnStatusOfTransactionMysql(getMySQLConn()).equals("DECLINED");
+        assertEquals("APPROVED", DataBase.returnStatusOfTransactionMysql(getMySQLConn()));
 
 
 
