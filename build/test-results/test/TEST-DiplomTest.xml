@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-13T11:05:39" hostname="DESKTOP-P1OSEEA" time="9.053">
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-15T09:19:23" hostname="DESKTOP-P1OSEEA" time="5.998">
   <properties/>
-  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="9.053">
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="5.998">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -103,11 +103,11 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 22069
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 40391
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-июн. 13, 2023 2:05:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+июн. 15, 2023 12:19:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 114, so returning the closest version found: 110
 ]]></system-err>
 </testsuite>
