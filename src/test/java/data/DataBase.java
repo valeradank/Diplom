@@ -13,13 +13,13 @@ import java.sql.SQLException;
 
 
 public class DataBase {
-    public static final QueryRunner runner = new QueryRunner();
-    public static final String mySQLAddress = "jdbc:mysql://localhost:3306/app";
-    public static final String mySqlDBName = "app";
-    public static final String mySQLPassword = "pass";
-    public static final String postgreAddress = "jdbc:postgresql://localhost:5432/app";
-    public static final String postgreDBname = "app";
-    public static final String postgrePassword = "pass";
+    private static final QueryRunner runner = new QueryRunner();
+    private static final String mySQLAddress = "jdbc:mysql://localhost:3306/app";
+    private static final String mySqlDBName = "app";
+    private static final String mySQLPassword = "pass";
+    private static final String postgreAddress = "jdbc:postgresql://localhost:5432/app";
+    private static final String postgreDBname = "app";
+    private static final String postgrePassword = "pass";
 
     private DataBase() {
     }

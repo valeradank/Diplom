@@ -1,4 +1,3 @@
-
 FROM node:14
 
 
@@ -14,9 +13,8 @@ RUN npm install
 COPY . .
 
 
-EXPOSE 3306
+EXPOSE 9999
 
 
 CMD ["node", "app.js"]
 WORKDIR /app
-
