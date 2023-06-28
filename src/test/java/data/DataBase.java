@@ -1,6 +1,7 @@
 package data;
 
 import lombok.SneakyThrows;
+import lombok.val;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.junit.jupiter.api.BeforeAll;
@@ -45,14 +46,21 @@ public class DataBase {
         return String.valueOf(status);
     }
     @SneakyThrows
-    public static String returnStatusOfTransactionMysql(Connection mySQLConn) {
-        var codeSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
+    public static String returnStatusOfTransactionMysql1(Connection mySQLConn) {
+        var transactionId = 1;
+        var codeSQL = "SELECT status FROM payment_entity WHERE id = ? ORDER BY id DESC LIMIT 1";
         var conn = getMySQLConn();
-        var status = runner.query(conn, codeSQL, new ScalarHandler<>());
+        var status = runner.query(conn, codeSQL, new ScalarHandler<>(), transactionId);
         return String.valueOf(status);
     }
-
-
+    @SneakyThrows
+    public static String returnStatusOfTransactionMysql2(Connection mySQLConn) {
+        var transactionId = 2;
+        var codeSQL = "SELECT status FROM payment_entity WHERE id = ? ORDER BY id DESC LIMIT 1";
+        var conn = getMySQLConn();
+        var status = runner.query(conn, codeSQL, new ScalarHandler<>(), transactionId);
+        return String.valueOf(status);
+    }
     @BeforeEach
     @SneakyThrows
     public void cleanDataBase() {
@@ -68,6 +76,11 @@ public class DataBase {
             runner.update(connection, "DELETE FROM credit_request_entity");
         }
     }
+
+
+
+
 }
+
 
 

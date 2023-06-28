@@ -3,6 +3,8 @@
 2. в Doсker включаем PostgreSQL
 3. открываем проект в IDEA
 4. открываем теминал и пишем docker compose up
-5. открыаем новый терминал и пишем java -jar aqa-shop.jar
-6. открываем новый терминал и пишем ./gradlew clean test
+5. открыаем новый терминал и пишем java -jar aqa-shop.jar "--spring.datasource.url=jdbc:mysql://localhost:3306/app
+   " "--spring.datasource.username=app" "--spring.datasource.password=pass"
+6. открываем новый терминал и пишем ./gradlew  test "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" "-Dsp
+   ring.datasource.username=app" "-Dspring.datasource.password=pass"
 7. открываем новый терминал и пишем ./gradlew allureServe
