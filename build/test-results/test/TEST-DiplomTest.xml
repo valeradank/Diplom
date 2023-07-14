@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-27T09:43:02" hostname="DESKTOP-P1OSEEA" time="6.211">
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-07-14T08:42:18" hostname="DESKTOP-P1OSEEA" time="12.611">
   <properties/>
-  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="6.211">
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="12.611">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -9,7 +9,7 @@
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
-	at app//DiplomTest.buyWithActuallyCard(DiplomTest.java:28)
+	at app//DiplomTest.buyWithActuallyCard(DiplomTest.java:29)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,11 +103,11 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 34107
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 2585
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-июн. 27, 2023 12:43:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+июл. 14, 2023 11:42:20 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 114, so returning the closest version found: 110
 ]]></system-err>
 </testsuite>

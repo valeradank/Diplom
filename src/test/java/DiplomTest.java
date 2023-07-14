@@ -1,16 +1,9 @@
 import data.DataHelper;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import page.InitialPage;
 import page.PageInformation;
 import data.DataBase;
-
-
-import java.sql.Connection;
-
 import static com.codeborne.selenide.Selenide.open;
-
-
 import static data.DataBase.getMySQLConn;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
