@@ -1,14 +1,18 @@
+
 import data.DataHelper;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import page.InitialPage;
 import page.PageInformation;
 import data.DataBase;
 import static com.codeborne.selenide.Selenide.open;
-import static data.DataBase.getMySQLConn;
+
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class DiplomTest {
+
+
     @Test
     void buyWithActuallyCard() {
         open("http://localhost:8080");
@@ -18,7 +22,8 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        assertEquals("APPROVED", DataBase.returnStatusOfTransactionMysql1(getMySQLConn()));
+
+        assertEquals("APPROVED", DataBase.getStatusByCard());
 
 
 
@@ -35,7 +40,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-        assertEquals("APPROVED", DataBase.returnStatusOfTransactionMysql1(getMySQLConn()));
+        assertEquals("APPROVED", DataBase.getStatusByCredit());
 
 
 
@@ -50,7 +55,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
-        assertEquals("DECLINED", DataBase.returnStatusOfTransactionMysql2(getMySQLConn()));
+        assertEquals("DECLINED", DataBase.getStatusByCard());
 
     }
 
@@ -63,7 +68,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
-        assertEquals("DECLINED", DataBase.returnStatusOfTransactionMysql2(getMySQLConn()));
+        assertEquals("DECLINED", DataBase.getStatusByCard());
     }
 
     @Test

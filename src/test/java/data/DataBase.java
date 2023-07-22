@@ -6,48 +6,29 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 
-    public class DataBase {
-        private static final QueryRunner runner = new QueryRunner();
 
-        private DataBase() {
-        }
 
-        @SneakyThrows
-        private static Connection getConnection(String address, String dbName, String password) {
-            return DriverManager.getConnection(address, dbName, password);
-        }
+public class DataBase {
 
-        public static Connection getMySQLConn() {
-            return getConnection(Credentials.mySQLAddress, Credentials.mySqlDBName, Credentials.mySQLPassword);
-        }
+    private static final QueryRunner runner = new QueryRunner();
 
-        public static Connection getPostgreConn() {
-            return getConnection(Credentials.postgreAddress, Credentials.postgreDBname, Credentials.postgrePassword);
-        }
+    @SneakyThrows
+    public static Connection getConnection() {
+        return DriverManager.getConnection(System.getProperty("source"), System.getProperty("username"), System.getProperty("password"));
+    }
 
 
 
     @SneakyThrows
-    public static String returnStatusOfTransaction(Connection connection) {
-        var codeSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
-        var conn = getPostgreConn();
-        var status = runner.query(conn, codeSQL, new ScalarHandler<>());
-        return String.valueOf(status);
+    public static String getStatusByCard() {
+        String status = "SELECT status FROM payment_entity ORDER BY created DESC";
+        return runner.query( getConnection(), status, new ScalarHandler<>());
     }
+
     @SneakyThrows
-    public static String returnStatusOfTransactionMysql1(Connection mySQLConn) {
-        var transactionId = 1;
-        var codeSQL = "SELECT status FROM payment_entity WHERE id = ? ORDER BY id DESC LIMIT 1";
-        var conn = getMySQLConn();
-        var status = runner.query(conn, codeSQL, new ScalarHandler<>(), transactionId);
-        return String.valueOf(status);
+    public static String getStatusByCredit() {
+        String status = "SELECT status FROM credit_request_entity ORDER BY created DESC";
+        return runner.query(getConnection(), status, new ScalarHandler<>());
     }
-    @SneakyThrows
-    public static String returnStatusOfTransactionMysql2(Connection mySQLConn) {
-        var transactionId = 2;
-        var codeSQL = "SELECT status FROM payment_entity WHERE id = ? ORDER BY id DESC LIMIT 1";
-        var conn = getMySQLConn();
-        var status = runner.query(conn, codeSQL, new ScalarHandler<>(), transactionId);
-        return String.valueOf(status);
-    }
+
 }
