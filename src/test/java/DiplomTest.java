@@ -22,7 +22,6 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getActuallyCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
-
         assertEquals("APPROVED", DataBase.getStatusByCard());
 
 
@@ -68,7 +67,7 @@ public class DiplomTest {
         var AuthInfo = DataHelper.getFalseCardInfo();
         PageInformation.CardDetails(AuthInfo);
         PageInformation.ErrorNotificationVisible();
-        assertEquals("DECLINED", DataBase.getStatusByCard());
+        assertEquals("DECLINED", DataBase.getStatusByCredit());
     }
 
     @Test

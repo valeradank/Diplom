@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-07-22T11:08:16" hostname="DESKTOP-P1OSEEA" time="10.074">
+<testsuite name="DiplomTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-07-27T10:31:09" hostname="DESKTOP-P1OSEEA" time="49.443">
   <properties/>
-  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="10.074">
+  <testcase name="buyWithActuallyCard()" classname="DiplomTest" time="49.443">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;APPROVED&gt; but was: &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -9,7 +9,7 @@
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
-	at app//DiplomTest.buyWithActuallyCard(DiplomTest.java:26)
+	at app//DiplomTest.buyWithActuallyCard(DiplomTest.java:25)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,12 +103,12 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 36180
+  <system-err><![CDATA[Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 39729
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1690024097.980][WARNING]: This version of ChromeDriver has not been tested with Chrome version 115.
-июл. 22, 2023 2:08:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1690453873.840][WARNING]: This version of ChromeDriver has not been tested with Chrome version 115.
+июл. 27, 2023 1:31:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
