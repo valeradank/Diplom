@@ -6,3 +6,6 @@ target
 *.iml
 .gradle
 build
+gradle
+home
+data

@@ -1,11 +1,11 @@
 package data;
+
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-
-
 
 
 public class DataBase {
@@ -18,11 +18,10 @@ public class DataBase {
     }
 
 
-
     @SneakyThrows
     public static String getStatusByCard() {
         String status = "SELECT status FROM payment_entity ORDER BY created DESC";
-        return runner.query( getConnection(), status, new ScalarHandler<>());
+        return runner.query(getConnection(), status, new ScalarHandler<>());
     }
 
     @SneakyThrows

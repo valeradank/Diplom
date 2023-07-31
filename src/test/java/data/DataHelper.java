@@ -71,8 +71,7 @@ public class DataHelper {
     }
 
     public static RandomInfo generateRandomCardInfo(String locale) {
-        return new RandomInfo(generateCardNumber("ru"), generateMonth(Integer.parseInt("5")), generateYear(Integer.parseInt("5")),
-                generateName("ru"), generateCvc());
+        return new RandomInfo(generateCardNumber("ru"), generateMonth(Integer.parseInt("5")), generateYear(Integer.parseInt("5")), generateName("ru"), generateCvc());
     }
 
 }

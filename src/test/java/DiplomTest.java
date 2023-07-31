@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import page.InitialPage;
 import page.PageInformation;
 import data.DataBase;
+
 import static com.codeborne.selenide.Selenide.open;
 
 
@@ -25,9 +26,6 @@ public class DiplomTest {
         assertEquals("APPROVED", DataBase.getStatusByCard());
 
 
-
-
-
     }
 
     @Test
@@ -40,7 +38,6 @@ public class DiplomTest {
         PageInformation.CardDetails(AuthInfo);
         PageInformation.notificationVisible();
         assertEquals("APPROVED", DataBase.getStatusByCredit());
-
 
 
     }
@@ -93,5 +90,5 @@ public class DiplomTest {
     }
 
 
-    }
+}
 

@@ -9,7 +9,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PageInformation {
-    private SelenideElement cardNumber =$x("//*[@placeholder='0000 0000 0000 0000']");
+    private SelenideElement cardNumber = $x("//*[@placeholder='0000 0000 0000 0000']");
     private SelenideElement month = $x("//*[@placeholder='08']");
     private SelenideElement year = $x("//*[@placeholder='22']");
     private SelenideElement owner = $x("(//*[@class='input__control'])[4]");
@@ -18,19 +18,22 @@ public class PageInformation {
     private SelenideElement notification = $x("(//*[@class='notification__icon'])[1]");
     private SelenideElement errorNotification = $x("(//*[@class='notification__icon'])[2]");
     private SelenideElement buyButton = $x("//span[text()='Купить']");
-    private SelenideElement wrongInfo =$x("//span[text()='Истёк срок действия карты']");
+    private SelenideElement wrongInfo = $x("//span[text()='Истёк срок действия карты']");
+
     public PageInformation() {
         buyButton.shouldBe(Condition.visible);
     }
-public PageInformation cardRandomDetails(DataHelper.RandomInfo info) {
-cardNumber.setValue(info.getRandomCardNumber());
-month.setValue(info.getRandomMonth());
-year.setValue(info.getRandomYear());
-owner.setValue(info.getRandomOwner());
-cvv.setValue(info.getRandomCvc());
-button.click();
-return new PageInformation();
-}
+
+    public PageInformation cardRandomDetails(DataHelper.RandomInfo info) {
+        cardNumber.setValue(info.getRandomCardNumber());
+        month.setValue(info.getRandomMonth());
+        year.setValue(info.getRandomYear());
+        owner.setValue(info.getRandomOwner());
+        cvv.setValue(info.getRandomCvc());
+        button.click();
+        return new PageInformation();
+    }
+
     public PageInformation CardDetails(DataHelper.AuthInfo info) {
         cardNumber.setValue(info.getCardNumber());
         month.setValue(info.getMonth());
@@ -49,7 +52,8 @@ return new PageInformation();
         notification.shouldBe(Condition.visible, Duration.ofSeconds(10));
         return null;
     }
+
     public void wrongInfoVisible() {
-        wrongInfo.shouldBe(Condition.visible,Duration.ofSeconds(10));
+        wrongInfo.shouldBe(Condition.visible, Duration.ofSeconds(10));
     }
 }
