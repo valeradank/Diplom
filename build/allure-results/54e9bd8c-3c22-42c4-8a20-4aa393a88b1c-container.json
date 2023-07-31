@@ -1,0 +1,1 @@
+{"uuid":"54e9bd8c-3c22-42c4-8a20-4aa393a88b1c","name":"DiplomTest","children":["96e37025-e043-4574-95c6-eaa822e7e201"],"befores":[{"name":"printDbProperties","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1689849327521,"stop":1689849327524}],"afters":[],"start":1689849327493,"stop":1689849334510}
