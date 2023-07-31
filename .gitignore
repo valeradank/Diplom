@@ -4,10 +4,12 @@ node_modules
 .idea
 target
 *.iml
-gradle/
+
 build/
-gradle/
+
 home
 data
-/build/
+
+
 /.gradle/
+/build/
