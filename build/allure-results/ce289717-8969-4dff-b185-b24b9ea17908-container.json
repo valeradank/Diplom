@@ -1,1 +1,0 @@
-{"uuid":"ce289717-8969-4dff-b185-b24b9ea17908","name":"buyWithActuallyCard()","children":["c10be463-dfaa-4a89-a037-b7b6df7f366d"],"befores":[],"afters":[{"name":"cleanTables","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1690022627492,"stop":1690022627530}],"start":1690022618778,"stop":1690022627586}
